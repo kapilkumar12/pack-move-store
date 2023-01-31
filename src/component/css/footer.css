@@ -1,0 +1,264 @@
+/* footer css start */
+
+.search-location b {
+  font-weight: 600;
+  display: inline-block;
+  margin: 0 4px 0 90px;
+  list-style: none;
+  cursor: pointer;
+}
+.line {
+  margin-top: 5px;
+  height: 2px;
+  width: 143px;
+  border: none !important;
+  font-weight: 600;
+  margin: 0 4px 0 90px;
+  content: "";
+  display: block;
+
+  background-color: #da251c;
+}
+@media (max-width: 768px) {
+  .search-location b {
+    margin: 0px;
+  }
+}
+@media (max-width: 768px) {
+  .line {
+    margin: 0px;
+  }
+}
+
+.footer {
+  width: 100%;
+  padding: 30px 0;
+  color: #ccc;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(20%, #ed1c24),
+    to(#940e0e)
+  );
+  background: -webkit-linear-gradient(left, #ed1c24 20%, #940e0e 100%);
+  background: -o-linear-gradient(left, #ed1c24 20%, #940e0e 100%);
+  background: linear-gradient(to right, #ed1c24 20%, #940e0e 100%);
+}
+.about-us {
+  text-align: start;
+}
+.about-us ul li {
+  list-style: none;
+}
+.about-us ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 12px;
+  line-height: 20px;
+
+  /* list-style: none; */
+}
+.about-us h5 {
+  margin-left: 30px;
+}
+.help {
+  text-align: start;
+}
+.help ul li {
+  list-style: none;
+}
+.help ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 12px;
+  line-height: 20px;
+
+  /* list-style: none; */
+}
+.help h5 {
+  margin-left: 30px;
+}
+.services {
+  text-align: start;
+}
+.services ul li {
+  list-style: none;
+}
+.services ul li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 12px;
+  line-height: 20px;
+
+  /* list-style: none; */
+}
+.services h5 {
+  margin-left: 30px;
+}
+.call-us h6 {
+  font-size: 15px;
+}
+
+.dwnld_br:hover {
+  color: #fff;
+}
+
+.dwnld_br {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 15px 0 0;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #fff;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.dwnld_br i {
+  font-size: 20px;
+  margin-left: 3px;
+}
+.second-footer {
+  background: #790a0e;
+  padding: 20px 0;
+  position: relative;
+  z-index: 99;
+}
+.copy-right {
+  color: #ccc;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.links li a {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 12px;
+  line-height: 20px;
+}
+.social {
+  list-style-type: none;
+  margin-top: 5px;
+  padding: 0;
+  display: flex;
+  column-gap: 10px;
+}
+.social li i {
+  text-decoration: none;
+  color: #ccc;
+  font-size: 20px;
+  line-height: 20px;
+}
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  .social {
+    display: none;
+  } /* show it on small screens */
+}
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  .social {
+    display: block;
+  } /* hide it elsewhere */
+}
+.what-new {
+  position: fixed;
+  right: -38px;
+  top: 65%;
+  z-index: 99;
+  cursor: pointer;
+  display: block;
+  transform: rotate(270deg);
+  background: #00c1a1;
+  padding: 12px 20px;
+  border-radius: 4px 4px 0 0;
+}
+.what-new a {
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+  line-height: 20px;
+}
+
+.newpop {
+  margin-right: 40px;
+  position: fixed;
+  bottom: 38px;
+  top: 50%;
+  /* z-index: 99; */
+  cursor: pointer;
+  display: block;
+  transform: rotate(180deg);
+  /* background: #00c1a1; */
+  padding: 12px 20px;
+  border-radius: 4px 4px 0 0;
+}
+/* mobile responsive */
+@media screen and (min-width: 0px) and (max-width: 720px) {
+  /* .footer { */
+  .footer .col:nth-of-type(1),
+  .footer .col:nth-of-type(2),
+  .footer .col:nth-of-type(3),
+  .footer .col:nth-of-type(4),
+  .footer .col:nth-of-type(5),
+  .footer .col:nth-of-type(6) {
+    height: 50%;
+    width: 50%;
+  }
+} /* show it on small screens */
+/* } */
+
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  .footer {
+    display: block;
+  } /* hide it elsewhere */
+}
+/* footer css end */
+/* back to top */
+
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #0bd8e9;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #0ac2d2;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+/* back to top end  */
