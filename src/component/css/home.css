@@ -495,20 +495,18 @@
   margin-top: 170px;
   text-align: start;
 }
-.convenienceimg {
-  background-image: url(/public/assets/images/packing-moving.jpg) !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position: 100% 30%;
-  height: 200px;
-  image-rendering: optimizeSpeed;
+.convenience {
+  position: relative;
+  text-align: center;
 }
-/* .convenienceimg p {
+.convenience img {
+  width: 100%;
+}
+.convenience p {
+  position: absolute;
+  top: 60%;
   padding-top: 10px;
-
   left: 0;
-  top: 30px;
   background: rgba(255, 255, 255, 0.7);
   padding: 10px 12px;
   width: 0;
@@ -520,35 +518,87 @@
   display: table-cell;
   padding-left: 20px;
   vertical-align: top;
-} */
-
-.safetyimg {
-  background-image: url(/public/assets/images/agarwal-movers-crockery.jpg) !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position: 100% 30%;
-  height: 200px;
-  image-rendering: optimizeSpeed;
 }
-.customizedimg {
-  background-image: url(/public/assets/images/customized-packing.jpg) !important;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  background-position: 100% 30%;
-  height: 200px;
-  image-rendering: optimizeSpeed;
+.safety {
+  position: relative;
+  text-align: center;
 }
-.damageimg {
-  background-image: url(/public/assets/images/zero-damage.jpg) !important;
-  background-size: cover;
-  background-repeat: no-repeat;
+.safety img {
   width: 100%;
-  background-position: 100% 30%;
-  height: 200px;
-  image-rendering: optimizeSpeed;
+}
+.safety p {
+  position: absolute;
+  top: 60%;
+  padding-top: 10px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 12px;
+  width: 0;
+  width: 75%;
+  text-align: left;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  display: table-cell;
+  padding-left: 20px;
+  vertical-align: top;
+}
+.customized {
+  position: relative;
+  text-align: center;
+}
+.customized img {
+  width: 100%;
+}
+.customized p {
+  position: absolute;
+  top: 60%;
+  padding-top: 10px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 12px;
+  width: 0;
+  width: 75%;
+  text-align: left;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  display: table-cell;
+  padding-left: 20px;
+  vertical-align: top;
+}
+.damage {
+  position: relative;
+  text-align: center;
+}
+.damage img {
+  width: 100%;
+}
+.damage p {
+  position: absolute;
+  top: 60%;
+  padding-top: 10px;
+  left: 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 12px;
+  width: 0;
+  width: 75%;
+  text-align: left;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  display: table-cell;
+  padding-left: 20px;
+  vertical-align: top;
 }
 /* why mpl section */
-
+.why-pms p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  position: relative;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
 /* why mpl section end*/

@@ -11,8 +11,25 @@ import HailIcon from "@mui/icons-material/Hail";
 import AirportShuttleIcon from "@mui/icons-material/AirportShuttle";
 import SecurityIcon from "@mui/icons-material/Security";
 import PinDropIcon from "@mui/icons-material/PinDrop";
+import LanguageIcon from "@mui/icons-material/Language";
+import LocationCityIcon from "@mui/icons-material/LocationCity";
+import TimelineIcon from "@mui/icons-material/Timeline";
+import GroupsIcon from "@mui/icons-material/Groups";
+import DomainAddIcon from "@mui/icons-material/DomainAdd";
+import PsychologyIcon from "@mui/icons-material/Psychology";
+import PlaceIcon from "@mui/icons-material/Place";
+import MapsHomeWorkIcon from "@mui/icons-material/MapsHomeWork";
+import GridViewIcon from "@mui/icons-material/GridView";
+import $ from "jquery";
 
 const Home = () => {
+  // $(window).scroll(function () {
+  //   if ($(this).scrollTop() > 100) {
+  //     $("#pmsl").fadeOut();
+  //   } else {
+  //     $("#pmsl").fadeIn();
+  //   }
+  // });
   return (
     <>
       <Header />
@@ -204,7 +221,7 @@ const Home = () => {
       <div className="container-fluid about-content">
         <div className="container">
           <div className="row about-section">
-            <div className="col-lg-6">
+            <div className="col-lg-6 p-5" id="pmsl">
               <h3 className="text-danger">Pack Move & Store LTD.</h3>
               <h6>An ISO 9001:2015 & ISO 39001:2012 Certified Company</h6>
               <h3 className="text-danger">
@@ -232,53 +249,190 @@ const Home = () => {
                 <h3>Read More A MOVING SOLUTION THAT ASSURES</h3>
                 <div className="row pt-3">
                   <div className="col-lg-6">
-                    <div className="convenienceimg ">
-                      {/* <p>Convenience</p> */}
+                    <div className="convenience ">
+                      <img
+                        src="/assets/images/packing-moving.jpg"
+                        loading="lazy"
+                        alt=""
+                      />
+                      <div>
+                        <p>convenience</p>
+                      </div>
                     </div>
                   </div>
                   <div className="col-lg-6">
-                    <div className="safetyimg">
-                      <p></p>
+                    <div className="safety ">
+                      <img
+                        src="/assets/images/agarwal-movers-crockery.jpg"
+                        alt=""
+                        loading="lazy"
+                      />
+                      <div>
+                        <p>Safety and Security</p>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div className="row pt-3">
                   <div className="col-lg-6">
-                    <div className="customizedimg"></div>
+                    <div className="customized">
+                      <img
+                        src="/assets/images/customized-packing.jpg"
+                        loading="lazy"
+                        alt=""
+                      />
+                      <div>
+                        <p>Customized Packing</p>
+                      </div>
+                    </div>
                   </div>
                   <div className="col-lg-6">
-                    <div className="damageimg">
-                      {/* <img
+                    <div className="damage">
+                      <img
                         src="/assets/images/zero-damage.jpg"
                         loading="lazy"
                         alt=""
-                      /> */}
+                      />
+                      <div>
+                        <p>Zero Damage</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-lg-3">
-              <div>
+            <div className="col-lg-3 p-5 shadow  bg-body rounded">
+              <div className="why-pms ">
                 <h3>Why PMS?</h3>
                 <hr />
                 <div>
-                  <p>
-                    <SecurityIcon className="text-danger" />
+                  <p className="">
+                    <SecurityIcon className="text-danger m-2" />
                     34+ Years of Trust
                   </p>
                 </div>
                 <hr />
                 <div>
                   <p>
-                    <PinDropIcon className="text-danger" />
+                    <PinDropIcon className="text-danger m-1" />
                     1264+ Service Locations
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <LanguageIcon className="text-danger m-1" />
+                    182 Worldwide Coverage
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <LocationCityIcon className="text-danger m-1" />
+                    125+ Branches PAN India
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <TimelineIcon className="text-danger m-1" />
+                    132060+ Moves Annually
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <GroupsIcon className="text-danger m-1" />
+                    Trained Manpower
+                  </p>
+                </div>
+                <hr />
+
+                <div>
+                  <p>
+                    <DomainAddIcon className="text-danger m-1" />
+                    3000+ Trucking Cube (Container)
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <LocalShippingIcon className="text-danger m-1" />
+                    1200+ GPS Enabled Vehicles
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <PsychologyIcon className="text-danger m-1" />
+                    Innovative Technology
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <DomainAddIcon className="text-danger m-1" />
+                    20 Lac sq. ft warehouse space
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <PlaceIcon className="text-danger m-1" />
+                    Online Consignment Tracking
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <MapsHomeWorkIcon className="text-danger m-1" />
+                    Free Pre-Move Survey
+                  </p>
+                </div>
+                <hr />
+                <div>
+                  <p>
+                    <GridViewIcon className="text-danger ml-1" />
+                    7600+ Home Storage Lockers
                   </p>
                 </div>
               </div>
             </div>
-            <div className="col-lg-3"></div>
+            <div className="col-lg-3 p-5 ">
+              <h3 className="px-5">Awards</h3>
+              <div className="p-5">
+                <img
+                  src="/assets/images/indiacargo.jpg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div className="p-5">
+                <img
+                  src="/assets/images/manindra-awards.jpg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div className="p-5">
+                <img src="/assets/images/jk-award.jpg" loading="lazy" alt="" />
+              </div>
+              <div className="p-5">
+                <img
+                  src="/assets/images/zee-awards.jpg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+              <div className="p-5">
+                <img
+                  src="/assets/images/ceat-award.jpg"
+                  loading="lazy"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

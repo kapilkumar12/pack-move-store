@@ -17,7 +17,7 @@ const Header = () => {
   const classes = useStyles();
 
   // const select = (el, all = false) => {
-  //   el = el.trim();
+  //   el = el.trim();,
   //   if (all) {
   //     return [...document.querySelectorAll(el)];
   //   } else {
