@@ -232,7 +232,7 @@ a {
 /* footer css end */
 /* back to top */
 
-.back-to-top {
+/* .back-to-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
@@ -260,5 +260,5 @@ a {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
-}
+} */
 /* back to top end  */

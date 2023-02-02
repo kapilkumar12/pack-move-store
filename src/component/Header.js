@@ -96,7 +96,7 @@ const Header = () => {
       {/* haeder top end */}
       {/* header bottom start */}
 
-      <div className="container-fluid header-bottom  p-3">
+      <div className="container-fluid header-bottom nav-fixed p-3">
         <div className="container header-inner">
           <div className="row">
             <div className="col-md-2"></div>

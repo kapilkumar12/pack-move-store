@@ -1,4 +1,16 @@
+/* .nav-fixed {
+  position: fixed;
+  
+  z-index: 99;
+  cursor: pointer;
+  display: block;
+ 
+  background: #00c1a1;
+  padding: 12px 20px;
+  border-radius: 4px 4px 0 0;
+} */
 /* header style */
+
 .header-section {
   background: #ed1d24;
 }
