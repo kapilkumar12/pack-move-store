@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import "./css/home.css";
@@ -13,7 +13,7 @@ import SecurityIcon from "@mui/icons-material/Security";
 import PinDropIcon from "@mui/icons-material/PinDrop";
 import LanguageIcon from "@mui/icons-material/Language";
 import LocationCityIcon from "@mui/icons-material/LocationCity";
-import TimelineIcon from "@mui/icons-material/Timeline";
+// import TimelineIcon from "@mui/icons-material/Timeline";
 import GroupsIcon from "@mui/icons-material/Groups";
 import DomainAddIcon from "@mui/icons-material/DomainAdd";
 import PsychologyIcon from "@mui/icons-material/Psychology";
@@ -29,32 +29,223 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 // import $ from "jquery";
 
 const Home = () => {
-  // const [show, setShow] = React.useState(true);
-  // const onClick = () => setShowResults(true);
+  // $(document).ready(function () {
+  //   $("#slide").click(function () {
+  //     var hidden = $(".hidden");
+  //     var right = $(".right");
+  //     if (hidden.hasClass("visible")) {
+  //       hidden.animate({ right: "-1000px" }, "slow").removeClass("visible");
+  //       right.animate({ opacity: "1" }, "slow");
+  //     } else {
+  //       hidden.animate({ right: "0px" }, "slow").addClass("visible");
+  //       right.animate({ opacity: "0" }, "slow");
+  //     }
+  //   });
+  // });
+  // what serve
+  const clickDomestic = () => {
+    document.getElementById("domestic").style.display = "block";
+    document.getElementById("commercial").style.display = "none";
+  };
 
+  const clickCommercial = () => {
+    document.getElementById("domestic").style.display = "none";
+    document.getElementById("commercial").style.display = "block";
+  };
+  // what serve end
+  //  commercial move
+  const clickSupply = () => {
+    document.getElementById("supply").style.display = "block";
+    document.getElementById("warehousing").style.display = "none";
+    document.getElementById("exim").style.display = "none";
+    document.getElementById("odc").style.display = "none";
+    document.getElementById("logistics").style.display = "none";
+    document.getElementById("infrastructure").style.display = "none";
+  };
+
+  const clickWarehousing = () => {
+    document.getElementById("supply").style.display = "none";
+    document.getElementById("warehousing").style.display = "block";
+    document.getElementById("exim").style.display = "none";
+    document.getElementById("odc").style.display = "none";
+    document.getElementById("logistics").style.display = "none";
+    document.getElementById("infrastructure").style.display = "none";
+  };
+  const clickExim = () => {
+    document.getElementById("supply").style.display = "none";
+    document.getElementById("warehousing").style.display = "none";
+    document.getElementById("exim").style.display = "block";
+    document.getElementById("odc").style.display = "none";
+    document.getElementById("logistics").style.display = "none";
+    document.getElementById("infrastructure").style.display = "none";
+  };
+  const clickOdc = () => {
+    document.getElementById("supply").style.display = "none";
+    document.getElementById("warehousing").style.display = "none";
+    document.getElementById("exim").style.display = "none";
+    document.getElementById("odc").style.display = "block";
+    document.getElementById("logistics").style.display = "none";
+    document.getElementById("infrastructure").style.display = "none";
+  };
+  const clickLogistics = () => {
+    document.getElementById("supply").style.display = "none";
+    document.getElementById("warehousing").style.display = "none";
+    document.getElementById("exim").style.display = "none";
+    document.getElementById("odc").style.display = "none";
+    document.getElementById("logistics").style.display = "block";
+    document.getElementById("infrastructure").style.display = "none";
+  };
+  const clickInfrastructure = () => {
+    document.getElementById("supply").style.display = "none";
+    document.getElementById("warehousing").style.display = "none";
+    document.getElementById("exim").style.display = "none";
+    document.getElementById("odc").style.display = "none";
+    document.getElementById("logistics").style.display = "none";
+    document.getElementById("infrastructure").style.display = "block";
+  };
+
+  // commercial move end
+  // what make unique
+  const clickUsp = () => {
+    document.getElementById("usp").style.display = "block";
+    document.getElementById("study").style.display = "none";
+    document.getElementById("advantage").style.display = "none";
+    document.getElementById("safety").style.display = "none";
+    document.getElementById("storage").style.display = "none";
+  };
+
+  const clickStudy = () => {
+    document.getElementById("usp").style.display = "none";
+    document.getElementById("study").style.display = "block";
+    document.getElementById("advantage").style.display = "none";
+    document.getElementById("safety").style.display = "none";
+    document.getElementById("storage").style.display = "none";
+  };
+  const clickAdvatage = () => {
+    document.getElementById("usp").style.display = "none";
+    document.getElementById("study").style.display = "none";
+    document.getElementById("advantage").style.display = "block";
+    document.getElementById("safety").style.display = "none";
+    document.getElementById("storage").style.display = "none";
+  };
+  const clickSafety = () => {
+    document.getElementById("usp").style.display = "none";
+    document.getElementById("study").style.display = "none";
+    document.getElementById("advantage").style.display = "none";
+    document.getElementById("safety").style.display = "block";
+    document.getElementById("storage").style.display = "none";
+  };
+  const clickStorage = () => {
+    document.getElementById("usp").style.display = "none";
+    document.getElementById("study").style.display = "none";
+    document.getElementById("advantage").style.display = "none";
+    document.getElementById("safety").style.display = "none";
+    document.getElementById("storage").style.display = "block";
+  };
+  // what make unique end
+  // usp click event
   const clickTrucking = () => {
     document.getElementById("truckingTube").style.display = "block";
-
     document.getElementById("ledBox").style.display = "none";
-
     document.getElementById("fabricSheets").style.display = "none";
   };
 
   const clickLed = () => {
     document.getElementById("truckingTube").style.display = "none";
-
     document.getElementById("ledBox").style.display = "block";
-
     document.getElementById("fabricSheets").style.display = "none";
   };
   const clickFabric = () => {
     document.getElementById("truckingTube").style.display = "none";
-
     document.getElementById("ledBox").style.display = "none";
-
     document.getElementById("fabricSheets").style.display = "block";
   };
+  // usp click event end
 
+  // testimonials start
+  const clickCorporate = () => {
+    document.getElementById("corporate").style.display = "block";
+    document.getElementById("banking").style.display = "none";
+    document.getElementById("defence").style.display = "none";
+    document.getElementById("iits").style.display = "none";
+    document.getElementById("judicial").style.display = "none";
+    document.getElementById("govt").style.display = "none";
+    document.getElementById("ias").style.display = "none";
+    document.getElementById("media").style.display = "none";
+  };
+
+  const clickBanking = () => {
+    document.getElementById("corporate").style.display = "none";
+    document.getElementById("banking").style.display = "block";
+    document.getElementById("defence").style.display = "none";
+    document.getElementById("iits").style.display = "none";
+    document.getElementById("judicial").style.display = "none";
+    document.getElementById("govt").style.display = "none";
+    document.getElementById("ias").style.display = "none";
+    document.getElementById("media").style.display = "none";
+  };
+  const clickDefence = () => {
+    document.getElementById("corporate").style.display = "none";
+    document.getElementById("banking").style.display = "none";
+    document.getElementById("defence").style.display = "block";
+    document.getElementById("iits").style.display = "none";
+    document.getElementById("judicial").style.display = "none";
+    document.getElementById("govt").style.display = "none";
+    document.getElementById("ias").style.display = "none";
+    document.getElementById("media").style.display = "none";
+  };
+  const clickIITs = () => {
+    document.getElementById("corporate").style.display = "none";
+    document.getElementById("banking").style.display = "none";
+    document.getElementById("defence").style.display = "none";
+    document.getElementById("iits").style.display = "block";
+    document.getElementById("judicial").style.display = "none";
+    document.getElementById("govt").style.display = "none";
+    document.getElementById("ias").style.display = "none";
+    document.getElementById("media").style.display = "none";
+  };
+  const clickJudicial = () => {
+    document.getElementById("corporate").style.display = "none";
+    document.getElementById("banking").style.display = "none";
+    document.getElementById("defence").style.display = "none";
+    document.getElementById("iits").style.display = "none";
+    document.getElementById("judicial").style.display = "block";
+    document.getElementById("govt").style.display = "none";
+    document.getElementById("ias").style.display = "none";
+    document.getElementById("media").style.display = "none";
+  };
+  const clickGovt = () => {
+    document.getElementById("corporate").style.display = "none";
+    document.getElementById("banking").style.display = "none";
+    document.getElementById("defence").style.display = "none";
+    document.getElementById("iits").style.display = "none";
+    document.getElementById("judicial").style.display = "none";
+    document.getElementById("govt").style.display = "block";
+    document.getElementById("ias").style.display = "none";
+    document.getElementById("media").style.display = "none";
+  };
+  const clickIas = () => {
+    document.getElementById("corporate").style.display = "none";
+    document.getElementById("banking").style.display = "none";
+    document.getElementById("defence").style.display = "none";
+    document.getElementById("iits").style.display = "none";
+    document.getElementById("judicial").style.display = "none";
+    document.getElementById("govt").style.display = "none";
+    document.getElementById("ias").style.display = "block";
+    document.getElementById("media").style.display = "none";
+  };
+  const clickMedia = () => {
+    document.getElementById("corporate").style.display = "none";
+    document.getElementById("banking").style.display = "none";
+    document.getElementById("defence").style.display = "none";
+    document.getElementById("iits").style.display = "none";
+    document.getElementById("judicial").style.display = "none";
+    document.getElementById("govt").style.display = "none";
+    document.getElementById("ias").style.display = "none";
+    document.getElementById("media").style.display = "block";
+  };
+
+  // testimonial end
   return (
     <>
       <Header />
@@ -478,35 +669,40 @@ const Home = () => {
           </div>
           <div>
             <ul className="d-flex justify-content-center gap-5 aos-init aos-animate resp-tabs-list">
-              <li className=" hor_1 resp-tab-item domestic" id="domestic">
-                <a href="">Domestic</a>
+              <li
+                className=" hor_1 resp-tab-item domestic"
+                onClick={clickDomestic}
+              >
+                <a>Domestic</a>
               </li>
-              <li className=" hor_1 resp-tab-active resp-tab-item commercial">
-                <a href="">Commercial</a>
+              <li
+                className=" hor_1 resp-tab-active resp-tab-item commercial"
+                onClick={clickCommercial}
+              >
+                <a>Commercial</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-      {/* commercial serve section start */}
-      <div className="container-fluid  commercial-section">
+
+      {/* domestic serve section start */}
+      <div className="container-fluid  commercial-section" id="domestic">
         <div className="text-center ">
-          <h2>Commercial Move</h2>
+          <h2>Domestic Moving</h2>
           <p className="csp">
-            We are trusted by numerous organizations worldwide for offering the
-            unexpected commercial moving services. We ensure that our corporate
-            clients attain peace of mind while relocating their business to and
-            from any place. Our simplified approach includes thoughtful
-            planning, expert moving assistance, clear communication, and
-            punctuality so that our clients never get disappointed on hiring us
-            as their commercial moving partner.
+            Agarwal Packers and Movers Ltd. offers unrivaled domestic relocation
+            services as per your specific requirements. We make sure that your
+            household shifting to and from any corner of India is absolutely
+            hassle-free by deploying our distinctive and brilliant moving
+            techniques.
           </p>
         </div>
         <div className="row text-center">
           <div className="col-lg-6 ">
             <div className="row commercial-two">
               <div className="col-lg-4">
-                <div className="supply-chain">
+                <div className="supply-chain" onClick={clickSupply}>
                   <div>
                     <LocalShippingIcon className="icon" />
                   </div>
@@ -514,7 +710,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="supply-chain">
+                <div className="supply-chain" onClick={clickWarehousing}>
                   <div>
                     <DomainAddIcon className="icon" />
                   </div>
@@ -522,7 +718,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="supply-chain">
+                <div className="supply-chain" onClick={clickExim}>
                   <div>
                     <LocalShippingIcon className="icon" />
                   </div>
@@ -532,7 +728,7 @@ const Home = () => {
             </div>
             <div className="row commercial-two">
               <div className="col-lg-4">
-                <div className="supply-chain">
+                <div className="supply-chain" onClick={clickOdc}>
                   <div>
                     <BusAlertIcon className="icon" />
                   </div>
@@ -540,7 +736,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="supply-chain">
+                <div className="supply-chain" onClick={clickLogistics}>
                   <div>
                     <CarCrashIcon className="icon" />
                   </div>
@@ -548,7 +744,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="col-lg-4">
-                <div className="supply-chain">
+                <div className="supply-chain" onClick={clickInfrastructure}>
                   <div>
                     <LocalShippingIcon className="icon" />
                   </div>
@@ -559,7 +755,8 @@ const Home = () => {
           </div>
           <div className="col-lg-6">
             <div className="tab-red"></div>
-            <div>
+            {/* supply chain section start */}
+            <div id="supply">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -595,6 +792,497 @@ const Home = () => {
                 </button>
               </div>
             </div>
+            {/* supply chain section end */}
+            {/* warehousing section start */}
+            <div id="warehousing">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Warehousing</h4>
+                <p>
+                  By understanding your storage related needs, we provide
+                  A-Grade (box) warehousing services including predominantly
+                  transportation and distribution facilities.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Customizable to client’s needs
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Round the Clock Security
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Clean and Temperature Controlled Storages
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Automated Networks
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* warehousing section end */}
+            {/* exim cargo section start */}
+            <div id="exim">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Exim Cargo</h4>
+                <p>
+                  We are committed to provide you with comprehensive and high
+                  tech export-import solutions using our innovative technology.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Improvement in Operational Efficiency
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Maximizes Visibility of Data Processing
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Upgradation in Custom Processes
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Reduction in Cost
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* exim cargo section end */}
+            {/* odc transportion section start */}
+            <div id="odc">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>ODC Transportation</h4>
+                <p>
+                  Owning the huge fleet of GPS enabled vehicles and best
+                  handlers of ODC, we provide progressive relocation services to
+                  our patrons at budget friendly prices.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Single-Window Service
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Different Size Of Trailers
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Damage-Free Transportation
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Assistance For Route Survey
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* odc transportation section end */}
+            {/* transportation and logistics section start */}
+            <div id="logistics">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Transportation & Logistics</h4>
+                <p>
+                  In order to meet your business’ transportation requirements,
+                  we are the one-stop solution to perform your day-to day
+                  logistics and transportation services efficiently.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Integrated Techniques
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Safe and Secured Shifting
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Value-Added Benefits
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Sustainable Commitments
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* transporation and logistics section end */}
+            {/* infrastructure section start */}
+            <div id="infrastructure">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Infrastructure</h4>
+                <p>
+                  We provide you with the top-of-the-line infrastructure and
+                  roofing solutions which are advanced, seamless and integrated.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Voluminous
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Self-Supported
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Damage & Corrosion resistant
+                  </li>
+                  <li>
+                    <DoneAllIcon /> User Friendly
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* infrastructure section end */}
+          </div>
+        </div>
+      </div>
+      {/* domestic serve section end */}
+
+      {/* commercial serve section start */}
+      <div className="container-fluid  commercial-section" id="commercial">
+        <div className="text-center ">
+          <h2>Commercial Move</h2>
+          <p className="csp">
+            We are trusted by numerous organizations worldwide for offering the
+            unexpected commercial moving services. We ensure that our corporate
+            clients attain peace of mind while relocating their business to and
+            from any place. Our simplified approach includes thoughtful
+            planning, expert moving assistance, clear communication, and
+            punctuality so that our clients never get disappointed on hiring us
+            as their commercial moving partner.
+          </p>
+        </div>
+        <div className="row text-center">
+          <div className="col-lg-6 ">
+            <div className="row commercial-two">
+              <div className="col-lg-4">
+                <div className="supply-chain" onClick={clickSupply}>
+                  <div>
+                    <LocalShippingIcon className="icon" />
+                  </div>
+                  <div>Supply Chain</div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="supply-chain" onClick={clickWarehousing}>
+                  <div>
+                    <DomainAddIcon className="icon" />
+                  </div>
+                  <div>Warehousing</div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="supply-chain" onClick={clickExim}>
+                  <div>
+                    <LocalShippingIcon className="icon" />
+                  </div>
+                  <div>Exim Cargo</div>
+                </div>
+              </div>
+            </div>
+            <div className="row commercial-two">
+              <div className="col-lg-4">
+                <div className="supply-chain" onClick={clickOdc}>
+                  <div>
+                    <BusAlertIcon className="icon" />
+                  </div>
+                  <div>ODC Transportation</div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="supply-chain" onClick={clickLogistics}>
+                  <div>
+                    <CarCrashIcon className="icon" />
+                  </div>
+                  <div>Transportation & Logistics</div>
+                </div>
+              </div>
+              <div className="col-lg-4">
+                <div className="supply-chain" onClick={clickInfrastructure}>
+                  <div>
+                    <LocalShippingIcon className="icon" />
+                  </div>
+                  <div>Infrastructure</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-6">
+            <div className="tab-red"></div>
+            {/* supply chain section start */}
+            <div id="supply">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Supply Chain</h4>
+                <p>
+                  We are pioneers in offering third party logistics and supply
+                  chain management solutions to maintain the profitability of
+                  your business.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Integrated Supply chain solutions
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Digital Innovations
+                  </li>
+                  <li>
+                    <DoneAllIcon /> National Presence
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Cost-Effective Mechanism
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* supply chain section end */}
+            {/* warehousing section start */}
+            <div id="warehousing">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Warehousing</h4>
+                <p>
+                  By understanding your storage related needs, we provide
+                  A-Grade (box) warehousing services including predominantly
+                  transportation and distribution facilities.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Customizable to client’s needs
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Round the Clock Security
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Clean and Temperature Controlled Storages
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Automated Networks
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* warehousing section end */}
+            {/* exim cargo section start */}
+            <div id="exim">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Exim Cargo</h4>
+                <p>
+                  We are committed to provide you with comprehensive and high
+                  tech export-import solutions using our innovative technology.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Improvement in Operational Efficiency
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Maximizes Visibility of Data Processing
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Upgradation in Custom Processes
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Reduction in Cost
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* exim cargo section end */}
+            {/* odc transportion section start */}
+            <div id="odc">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>ODC Transportation</h4>
+                <p>
+                  Owning the huge fleet of GPS enabled vehicles and best
+                  handlers of ODC, we provide progressive relocation services to
+                  our patrons at budget friendly prices.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Single-Window Service
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Different Size Of Trailers
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Damage-Free Transportation
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Assistance For Route Survey
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* odc transportation section end */}
+            {/* transportation and logistics section start */}
+            <div id="logistics">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Transportation & Logistics</h4>
+                <p>
+                  In order to meet your business’ transportation requirements,
+                  we are the one-stop solution to perform your day-to day
+                  logistics and transportation services efficiently.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Integrated Techniques
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Safe and Secured Shifting
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Value-Added Benefits
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Sustainable Commitments
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* transporation and logistics section end */}
+            {/* infrastructure section start */}
+            <div id="infrastructure">
+              <div className="tab-image">
+                <img
+                  src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
+                  loading="lazy"
+                  className="animated zoomIn lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="red-layer wow slideInRight animated animated">
+                <h4>Infrastructure</h4>
+                <p>
+                  We provide you with the top-of-the-line infrastructure and
+                  roofing solutions which are advanced, seamless and integrated.
+                </p>
+                <ul>
+                  <li>
+                    <DoneAllIcon /> Voluminous
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Self-Supported
+                  </li>
+                  <li>
+                    <DoneAllIcon /> Damage & Corrosion resistant
+                  </li>
+                  <li>
+                    <DoneAllIcon /> User Friendly
+                  </li>
+                </ul>
+
+                <button type="button" className="btn btn-outline-light">
+                  Secondary
+                </button>
+              </div>
+            </div>
+            {/* infrastructure section end */}
           </div>
         </div>
       </div>
@@ -619,6 +1307,7 @@ const Home = () => {
                 className="resp-tab-item hor_1 resp-tab-active"
                 aria-controls="hor_1_tab_item-0"
                 role="tab"
+                onClick={clickUsp}
               >
                 Our USP
               </li>
@@ -626,6 +1315,7 @@ const Home = () => {
                 className="resp-tab-item hor_1"
                 aria-controls="hor_1_tab_item-1"
                 role="tab"
+                onClick={clickStudy}
               >
                 Case Study
               </li>
@@ -633,6 +1323,7 @@ const Home = () => {
                 className="resp-tab-item hor_1"
                 aria-controls="hor_1_tab_item-2"
                 role="tab"
+                onClick={clickAdvatage}
               >
                 Advantages
               </li>
@@ -640,6 +1331,7 @@ const Home = () => {
                 className="resp-tab-item hor_1"
                 aria-controls="hor_1_tab_item-3"
                 role="tab"
+                onClick={clickSafety}
               >
                 Safety Features
               </li>
@@ -647,6 +1339,7 @@ const Home = () => {
                 className="resp-tab-item hor_1"
                 aria-controls="hor_1_tab_item-4"
                 role="tab"
+                onClick={clickStorage}
               >
                 Storage Capacity
               </li>
@@ -656,7 +1349,7 @@ const Home = () => {
       </div>
       {/* our usp section start */}
 
-      <div className="container usp-section ">
+      <div className="container usp-section " id="usp">
         {/* trucking tube start */}
         <div className="trucking-tube-section" id="truckingTube">
           <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
@@ -897,6 +1590,250 @@ const Home = () => {
         {/* Led box end */}
       </div>
       {/* our usp section end */}
+
+      {/* case study start */}
+      <div className="container usp-section " id="study">
+        <div className="trucking-tube-section" id="truckingTube">
+          <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
+            <img
+              loading="lazy"
+              className="lazyload usp-img"
+              src="assets/images/iim-ahmedabad.jpg"
+              alt="TRUCKING CUBE"
+            />
+            IIM Ahmedabad
+          </h2>
+          <div className="row">
+            <div className="col-lg-6 usp-contant">
+              <div className="red-border">
+                <p>
+                  Over time, the company grew with experience, core competence,
+                  and confidence and established itself as one of the India's
+                  largest household transportation companies. The company’s name
+                  was soon changed to Agarwal Packers and Movers Limited. It had
+                  a fleet of over 1,000 vehicles, 80 company-owned offices with
+                  headquarters in New Delhi. It was an ISO 9001-2008 certified
+                  organization with a turnover value of over INR 3,820 million
+                  in 2013-14 and aspired to reach INR 20,000 million by the year
+                  2020. It employed 1,173 employees at payroll with more than
+                  4,000 people attached indirectly with the company. It was
+                  amongst the only four companies in India to be certified by
+                  ISO 39001:2012, which attested their contributions in road
+                  traffic safety. In 2012-13 APML was registered in LimcaBook of
+                  Records for transporting household goods of 61,302 clients.
+                  The core values of APML were Aastha, Apnapan, Awesome,
+                  Aspiration, and Assurance.
+                </p>
+                <div className="mt-5"></div>
+              </div>
+            </div>
+            <div className="col-lg-6 ">
+              <div className="trucking-cube-img">
+                <img
+                  src="assets/images/packing-and-moving.webp"
+                  loading="lazy"
+                  className="lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="story">
+                <div className="story-behind">
+                  <a href="">Read More</a>
+                  <div>
+                    <AddCircleIcon className="icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* case study section end */}
+      {/* Advantages section start */}
+      <div className="container usp-section " id="advantage">
+        <div className="trucking-tube-section" id="truckingTube">
+          <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
+            <img
+              loading="lazy"
+              className="lazyload usp-img"
+              src="assets/images/advantage.svg"
+              alt="TRUCKING CUBE"
+            />
+            Some of our advantages involve:
+          </h2>
+          <div className="row">
+            <div className="col-lg-6 usp-contant">
+              <div className="red-border">
+                <p>
+                  With our technology driven shifting solutions, we strive to
+                  turn your hectic process of moving into a hassle free affair.
+                  From packing of goods at the origin to unpacking at the
+                  customer’s premises, we provide complete moving solutions
+                  ensuring extreme care and security. Amongst the various
+                  benefits offered by us, some of them namely are:
+                </p>
+                <div className="advantages">
+                  <ul>
+                    <li>World-class packaging material</li>
+                    <li>Availability of 24*7 customer support</li>
+                    <li>GPS enabled Transportation vehicles</li>
+                    <li>Immediate settlement of claims</li>
+                  </ul>
+                </div>
+                <div className="mt-5"></div>
+              </div>
+            </div>
+            <div className="col-lg-6 ">
+              <div className="trucking-cube-img">
+                <img
+                  src="assets/images/agarwal-movers-packers-advantages.webp"
+                  loading="lazy"
+                  className="lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="story">
+                <div className="story-behind">
+                  <a href="">Read More</a>
+                  <div>
+                    <AddCircleIcon className="icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Advantages section end */}
+      {/* Safety features  section start */}
+      <div className="container usp-section " id="safety">
+        <div className="trucking-tube-section" id="truckingTube">
+          <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
+            <img
+              loading="lazy"
+              className="lazyload usp-img"
+              src="assets/images/security-icon.jpg"
+              alt=""
+            />
+            Safety Belts
+          </h2>
+          <div className="row">
+            <div className="col-lg-6 usp-contant">
+              <div className="red-border">
+                <div className="safety-belts">
+                  <ul>
+                    <li>
+                      We have standby trucks and security supervisors at various
+                      locations to handle any kind of exigencies and also ensure
+                      tamper-proof sealing and locking of the consignment while
+                      in transit.
+                    </li>
+                    <li>
+                      We also provide our clients with the facility of using
+                      their personal locks.
+                    </li>
+                    <li>
+                      We ensure that the goods moved are protected properly
+                      against rain, dust, sun, water and pilferage
+                      possibilities.
+                    </li>
+                    <li>
+                      Our personnel take adequate safety measures to ensure
+                      there is no damage to the goods from the bolts, angles and
+                      other vehicle accessories while loading and unloading.
+                    </li>
+                    <li>
+                      In addition, we also provide our customers with a total
+                      risk-free (FOV) cover (under section 11 of carrier Act)
+                      against their consignment, in case of claims they are
+                      settled within 21 days.
+                    </li>
+                    <li>
+                      We have belt system in our trucks which fixes the goods at
+                      top of the vehicle and hence, there is no movement of the
+                      goods and leads to unbreakable and safe transportation.
+                    </li>
+                  </ul>
+                </div>
+                <div className="mt-5"></div>
+              </div>
+            </div>
+            <div className="col-lg-6 ">
+              <div className="trucking-cube-img">
+                <img
+                  src="assets/images/agarwal-movers-packers-safety-belts.webp"
+                  loading="lazy"
+                  className="lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="story">
+                <div className="story-behind">
+                  <a href="">Read More</a>
+                  <div>
+                    <AddCircleIcon className="icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Safety features section end */}
+      {/* Storage capacity section start */}
+      <div className="container usp-section " id="storage">
+        <div className="trucking-tube-section" id="truckingTube">
+          <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
+            <img
+              loading="lazy"
+              className="lazyload usp-img"
+              src="assets/images/storage_img.jpg"
+              alt=""
+            />
+            Storage Capacity
+          </h2>
+          <div className="row">
+            <div className="col-lg-6 usp-contant">
+              <div className="red-border">
+                <p>
+                  APML possess well-maintained, fumigated and secure warehousing
+                  facilities for ensuring smooth transition of goods from one
+                  location to another. Providing safe storage space to the
+                  valuable belongings till these are delivered, our well managed
+                  services are made available for all places that are supported
+                  by our branch/network. For longer duration, we also provide
+                  the warehousing services on a fixed rent on monthly/
+                  fortnightly or weekly basis as required by the customers. This
+                  provides our customers, ease of reclaiming their consignment
+                  as per their time schedules. The secure surroundings of the
+                  warehouse from both inside and outside assure clients about
+                  complete safety of the shipped products.
+                </p>
+                <div className="mt-5"></div>
+              </div>
+            </div>
+            <div className="col-lg-6 ">
+              <div className="trucking-cube-img">
+                <img
+                  src="assets/images/agarwal-packers-storage-service.webp"
+                  loading="lazy"
+                  className="lazyload"
+                  alt=""
+                />
+              </div>
+              <div className="story">
+                <div className="story-behind">
+                  <a href="">Read More</a>
+                  <div>
+                    <AddCircleIcon className="icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* Storage capacity section end */}
       {/* what makes unique pms section end */}
 
       {/* about our company section start */}
@@ -977,6 +1914,367 @@ const Home = () => {
         </div>
       </div>
       {/* about our company section end */}
+
+      {/* our testimonial section start  */}
+      <div className="container p-5">
+        <div className="text-center">
+          <h4>Our Testimonials</h4>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-8 testimonial-first">
+            {/* corporate section start */}
+            <div className="corporate-section" id="corporate">
+              <div className="">
+                <img src="/assets/images/hash_img.png" alt="" />
+              </div>
+
+              <div className="">
+                <div className="client-text">
+                  <h4>Direct from client</h4>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+                <div className="client-details">
+                  <div>
+                    <img src="assets/images/E_Sreedharan.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h5>Mr. E. Sreedharan</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* corporate section end */}
+            {/* banking & financesection start */}
+            <div className="corporate-section" id="banking">
+              <div className="">
+                <img src="/assets/images/hash_img.png" alt="" />
+              </div>
+
+              <div className="">
+                <div className="client-text">
+                  <h4>Direct from client</h4>
+                  <p>
+                    In one word – it was excellent and I was very surprised with
+                    the packing technique they used. I’ll rate them 10 out of 10
+                    and I have been referring their services to lot of my
+                    friends and they are equally satisfied.
+                  </p>
+                </div>
+                <div className="client-details">
+                  <div>
+                    <img src="assets/images/E_Sreedharan.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h5>Mr. Sunil Srivastava</h5>
+                    <p>
+                      Dy. Managing Director <br /> State Bank of India
+                      <br />
+                      <b>Relocated from Mumbai to Ranchi</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* banking & finance section end */}
+            {/* Defence Officers section start */}
+            <div className="corporate-section" id="defence">
+              <div className="">
+                <img src="/assets/images/hash_img.png" alt="" />
+              </div>
+
+              <div className="">
+                <div className="client-text">
+                  <h4>Direct from client</h4>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+                <div className="client-details">
+                  <div>
+                    <img src="assets/images/E_Sreedharan.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h5>Capt. N. S. Mohan Ram</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Defence Officers section end */}
+            {/* IITs/Education section start */}
+            <div className="corporate-section" id="iits">
+              <div className="">
+                <img src="/assets/images/hash_img.png" alt="" />
+              </div>
+
+              <div className="">
+                <div className="client-text">
+                  <h4>Direct from client</h4>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+                <div className="client-details">
+                  <div>
+                    <img src="assets/images/E_Sreedharan.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h5>Mr. Vinayshil Gautam Founder</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* IITs/Education section end */}
+            {/* Judicial Services section start */}
+            <div className="corporate-section" id="judicial">
+              <div className="">
+                <img src="/assets/images/hash_img.png" alt="" />
+              </div>
+
+              <div className="">
+                <div className="client-text">
+                  <h4>Direct from client</h4>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+                <div className="client-details">
+                  <div>
+                    <img src="assets/images/E_Sreedharan.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h5>Justice Kurian Joseph</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Judicial Services section end */}
+            {/* Govt. of India / Ministries section start */}
+            <div className="corporate-section" id="govt">
+              <div className="">
+                <img src="/assets/images/hash_img.png" alt="" />
+              </div>
+
+              <div className="">
+                <div className="client-text">
+                  <h4>Direct from client</h4>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+                <div className="client-details">
+                  <div>
+                    <img src="assets/images/E_Sreedharan.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h5>Mr. T. N. Seshan</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Govt. of India / Ministries section end */}
+            {/* IAS / IPS / IRS section start */}
+            <div className="corporate-section" id="ias">
+              <div className="">
+                <img src="/assets/images/hash_img.png" alt="" />
+              </div>
+
+              <div className="">
+                <div className="client-text">
+                  <h4>Direct from client</h4>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+                <div className="client-details">
+                  <div>
+                    <img src="assets/images/E_Sreedharan.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h5>Mr. Ajay Kumar</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* IAS / IPS / IRS section end */}
+            {/* Media & Prominent People section start */}
+            <div className="corporate-section" id="media">
+              <div className="">
+                <img src="/assets/images/hash_img.png" alt="" />
+              </div>
+
+              <div className="">
+                <div className="client-text">
+                  <h4>Direct from client</h4>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+                <div className="client-details">
+                  <div>
+                    <img src="assets/images/E_Sreedharan.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h5>Mr. E. Sreedharan</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* Media & Prominent People section end */}
+          </div>
+          <div className="col-lg-4">
+            <div>
+              <div className="testimonial-nav">
+                <div>
+                  <h5>SEGMENTS</h5>
+                </div>
+                <div className="testimonial-custom-nav">
+                  <ul className="custom-nav">
+                    <li className="d-flex  gap-2" onClick={clickCorporate}>
+                      <h6>Corporate</h6>
+                      <AddCircleIcon className="icon" />
+                    </li>
+                    <li className=" d-flex  gap-2" onClick={clickBanking}>
+                      <h6>Banking & Finance</h6>
+                      <AddCircleIcon className="icon" />
+                    </li>
+                    <li className="d-flex  gap-2" onClick={clickDefence}>
+                      <h6>Defence Officers</h6>
+                      <AddCircleIcon className="icon" />
+                    </li>
+                    <li className="d-flex  gap-2" onClick={clickIITs}>
+                      <h6>IITs/Education</h6>
+                      <AddCircleIcon className="icon" />
+                    </li>
+                    <li className=" d-flex gap-2" onClick={clickJudicial}>
+                      <h6>Judicial Services</h6>
+                      <AddCircleIcon className="icon" />
+                    </li>
+                    <li className=" d-flex gap-2" onClick={clickGovt}>
+                      <h6>Govt. of India / Ministries</h6>
+                      <AddCircleIcon className="icon" />
+                    </li>
+                    <li className=" d-flex gap-2" onClick={clickIas}>
+                      <h6>IAS / IPS / IRS</h6>
+                      <AddCircleIcon className="icon" />
+                    </li>
+                    <li className=" d-flex gap-2" onClick={clickMedia}>
+                      <h6>Media & Prominent People</h6>
+                      <AddCircleIcon className="icon" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div>
+
+      {/* our testimonial section end */}
+
+      {/* our features section start */}
+      <div className="container features">
+        <div className="row row-cols-5 features-img">
+          <div className="col ">
+            <div>
+              <img
+                src="assets/images/forbes-india-logo.jpg"
+                loading="lazy"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="col">
+            <div>
+              <img
+                src="assets/images/bw-business-logo.jpg"
+                loading="lazy"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="col">
+            <div>
+              <img
+                src="assets/images/business-standard-logo.jpg"
+                loading="lazy"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="col">
+            <div>
+              <img
+                src="assets/images/the-hundu-logo.jpg"
+                loading="lazy"
+                alt=""
+              />
+            </div>
+          </div>
+          <div className="col">
+            <div>
+              <img
+                src="assets/images/ndtv-profit-logo.jpg"
+                loading="lazy"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* our features section end */}
       <Footer />
     </>
   );
