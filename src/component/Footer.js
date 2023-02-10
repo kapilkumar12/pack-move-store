@@ -1,23 +1,380 @@
 import React from "react";
 import "./css/footer.css";
+// import FeedbackIcon from "@mui/icons-material/Feedback";
+// import PhotoIcon from "@mui/icons-material/Photo";
+// import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
+// import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
+// import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+// import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+// import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 const Footer = () => {
   return (
     <>
+      {/* abouts company section start */}
+
+      {/* <div className="container p-5">
+        <div className="row row-cols-7">
+          <div className="col abouts-company">
+            <div className="d-flex gap-3">
+              <FeedbackIcon />
+              <h6>Post Feedback</h6>
+            </div>
+          </div>
+          <div className="col abouts-company">
+            <div className="d-flex gap-3">
+              <PhotoIcon />
+              <h6>Photo Gallery</h6>
+            </div>
+          </div>
+          <div className="col abouts-company">
+            <div className="d-flex gap-3">
+              <EmojiEventsIcon />
+              <h6>Award Gallery</h6>
+            </div>
+          </div>
+          <div className="col abouts-company">
+            <div className="d-flex gap-3">
+              <OndemandVideoIcon />
+              <h6>Media Space</h6>
+            </div>
+          </div>
+          <div className="col abouts-company">
+            <div className="d-flex gap-3">
+              <HelpOutlineIcon />
+              <h6>FAQ's</h6>
+            </div>
+          </div>
+          <div className="col abouts-company">
+            <div className="d-flex gap-3">
+              <LibraryBooksIcon />
+              <h6>Testimonials</h6>
+            </div>
+          </div>
+          <div className="col abouts-company">
+            <div className="d-flex gap-3">
+              <SupportAgentIcon />
+              <h6>Customer Care</h6>
+            </div>
+          </div>
+        </div>
+        <hr />
+      </div> */}
+      {/* abouts company section end */}
       {/* location section */}
-      <div className="container search-location" id="search-location">
+      {/* <div
+        className="container-fluid search-location bg-dark"
+        id="search-location"
+      >
         <div className="text-start text-danger ">
           <b>Search By Location</b>
           <div className="line"></div>
         </div>
 
-        <div className="row row-cols-5 mt-3" id="whatnew">
-          <div className="col">Column</div>
-          <div className="col">Column</div>
-          <div className="col">Column</div>
-          <div className="col">Column</div>
-          <div className="col">Column</div>
+        <div className="row row-cols-5 mt-3">
+          <div className="col">
+            <div>
+              <ul>
+                <li>
+                  <a href="">Packers & Movers Agra</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Ankleshwar</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Bhiwandi</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Calicut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Cuttack</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Gandhidham</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Guwahati</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Hyderabad</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Jamshedpur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Kolhapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Lucknow</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Meerut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Navimumbai</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Patna</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Raipur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Rudrapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Tinsukia</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Vapi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col">
+            <div>
+              <ul>
+                <li>
+                  <a href="">Packers & Movers Agra</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Ankleshwar</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Bhiwandi</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Calicut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Cuttack</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Gandhidham</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Guwahati</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Hyderabad</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Jamshedpur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Kolhapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Lucknow</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Meerut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Navimumbai</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Patna</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Raipur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Rudrapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Tinsukia</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Vapi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col">
+            <div>
+              <ul>
+                <li>
+                  <a href="">Packers & Movers Agra</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Ankleshwar</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Bhiwandi</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Calicut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Cuttack</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Gandhidham</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Guwahati</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Hyderabad</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Jamshedpur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Kolhapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Lucknow</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Meerut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Navimumbai</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Patna</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Raipur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Rudrapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Tinsukia</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Vapi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col">
+            {" "}
+            <div>
+              <ul>
+                <li>
+                  <a href="">Packers & Movers Agra</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Ankleshwar</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Bhiwandi</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Calicut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Cuttack</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Gandhidham</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Guwahati</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Hyderabad</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Jamshedpur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Kolhapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Lucknow</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Meerut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Navimumbai</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Patna</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Raipur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Rudrapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Tinsukia</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Vapi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col">
+            {" "}
+            <div>
+              <ul>
+                <li>
+                  <a href="">Packers & Movers Agra</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Ankleshwar</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Bhiwandi</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Calicut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Cuttack</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Gandhidham</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Guwahati</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Hyderabad</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Jamshedpur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Kolhapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Lucknow</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Meerut</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Navimumbai</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Patna</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Raipur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Rudrapur</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Tinsukia</a>
+                </li>
+                <li>
+                  <a href="">Packers & Movers Vapi</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+      </div> */}
       {/* location section end */}
       {/* footer section */}
       {/* first footer */}
@@ -233,7 +590,7 @@ const Footer = () => {
       {/* second footer end*/}
       {/* footer section end */}
       {/* new modal */}
-      <div className="what-new">
+      {/* <div className="what-new">
         <a
           href=""
           aria-label="What's New"
@@ -255,7 +612,7 @@ const Footer = () => {
           <h5 id="offcanvasRightLabel">Offcanvas right</h5>
         </div>
         <div className="offcanvas-body">...</div>
-      </div>
+      </div> */}
       {/* new modal end */}
     </>
   );

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import "./css/home.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import TimeToLeaveIcon from "@mui/icons-material/TimeToLeave";
 import BungalowIcon from "@mui/icons-material/Bungalow";
@@ -26,30 +28,25 @@ import BusAlertIcon from "@mui/icons-material/BusAlert";
 import CarCrashIcon from "@mui/icons-material/CarCrash";
 import EarbudsIcon from "@mui/icons-material/Earbuds";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
+import ArrowCircleLeftIcon from "@mui/icons-material/ArrowCircleLeft";
+// import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 // import $ from "jquery";
 
 const Home = () => {
-  // $(document).ready(function () {
-  //   $("#slide").click(function () {
-  //     var hidden = $(".hidden");
-  //     var right = $(".right");
-  //     if (hidden.hasClass("visible")) {
-  //       hidden.animate({ right: "-1000px" }, "slow").removeClass("visible");
-  //       right.animate({ opacity: "1" }, "slow");
-  //     } else {
-  //       hidden.animate({ right: "0px" }, "slow").addClass("visible");
-  //       right.animate({ opacity: "0" }, "slow");
-  //     }
-  //   });
-  // });
+  useEffect(() => {
+    AOS.init();
+  }, []);
   // what serve
+  // const [style, setStyle] = useState(false);
   const clickDomestic = () => {
+    // setStyle(!state);
     document.getElementById("domestic").style.display = "block";
     document.getElementById("commercial").style.display = "none";
   };
 
   const clickCommercial = () => {
     document.getElementById("domestic").style.display = "none";
+    // setStyle("resp-tab-active");
     document.getElementById("commercial").style.display = "block";
   };
   // what serve end
@@ -106,42 +103,42 @@ const Home = () => {
 
   // commercial move end
   // what make unique
-  const clickUsp = () => {
-    document.getElementById("usp").style.display = "block";
-    document.getElementById("study").style.display = "none";
-    document.getElementById("advantage").style.display = "none";
-    document.getElementById("safety").style.display = "none";
-    document.getElementById("storage").style.display = "none";
-  };
+  // const clickUsp = () => {
+  //   document.getElementById("usp").style.display = "block";
+  //   document.getElementById("study").style.display = "none";
+  //   document.getElementById("advantage").style.display = "none";
+  //   document.getElementById("safety").style.display = "none";
+  //   document.getElementById("storage").style.display = "none";
+  // };
 
-  const clickStudy = () => {
-    document.getElementById("usp").style.display = "none";
-    document.getElementById("study").style.display = "block";
-    document.getElementById("advantage").style.display = "none";
-    document.getElementById("safety").style.display = "none";
-    document.getElementById("storage").style.display = "none";
-  };
-  const clickAdvatage = () => {
-    document.getElementById("usp").style.display = "none";
-    document.getElementById("study").style.display = "none";
-    document.getElementById("advantage").style.display = "block";
-    document.getElementById("safety").style.display = "none";
-    document.getElementById("storage").style.display = "none";
-  };
-  const clickSafety = () => {
-    document.getElementById("usp").style.display = "none";
-    document.getElementById("study").style.display = "none";
-    document.getElementById("advantage").style.display = "none";
-    document.getElementById("safety").style.display = "block";
-    document.getElementById("storage").style.display = "none";
-  };
-  const clickStorage = () => {
-    document.getElementById("usp").style.display = "none";
-    document.getElementById("study").style.display = "none";
-    document.getElementById("advantage").style.display = "none";
-    document.getElementById("safety").style.display = "none";
-    document.getElementById("storage").style.display = "block";
-  };
+  // const clickStudy = () => {
+  //   document.getElementById("usp").style.display = "none";
+  //   document.getElementById("study").style.display = "block";
+  //   document.getElementById("advantage").style.display = "none";
+  //   document.getElementById("safety").style.display = "none";
+  //   document.getElementById("storage").style.display = "none";
+  // };
+  // const clickAdvatage = () => {
+  //   document.getElementById("usp").style.display = "none";
+  //   document.getElementById("study").style.display = "none";
+  //   document.getElementById("advantage").style.display = "block";
+  //   document.getElementById("safety").style.display = "none";
+  //   document.getElementById("storage").style.display = "none";
+  // };
+  // const clickSafety = () => {
+  //   document.getElementById("usp").style.display = "none";
+  //   document.getElementById("study").style.display = "none";
+  //   document.getElementById("advantage").style.display = "none";
+  //   document.getElementById("safety").style.display = "block";
+  //   document.getElementById("storage").style.display = "none";
+  // };
+  // const clickStorage = () => {
+  //   document.getElementById("usp").style.display = "none";
+  //   document.getElementById("study").style.display = "none";
+  //   document.getElementById("advantage").style.display = "none";
+  //   document.getElementById("safety").style.display = "none";
+  //   document.getElementById("storage").style.display = "block";
+  // };
   // what make unique end
   // usp click event
   const clickTrucking = () => {
@@ -246,11 +243,54 @@ const Home = () => {
   };
 
   // testimonial end
+
+  // features start
+
+  const clickForbes = () => {
+    document.getElementById("forbes").style.display = "block";
+    document.getElementById("bw").style.display = "none";
+    document.getElementById("business").style.display = "none";
+    document.getElementById("hindu").style.display = "none";
+    document.getElementById("ndtv").style.display = "none";
+  };
+  const clickBw = () => {
+    document.getElementById("forbes").style.display = "none";
+    document.getElementById("bw").style.display = "block";
+    document.getElementById("business").style.display = "none";
+    document.getElementById("hindu").style.display = "none";
+    document.getElementById("ndtv").style.display = "none";
+  };
+  const clickBusiness = () => {
+    document.getElementById("forbes").style.display = "none";
+    document.getElementById("bw").style.display = "none";
+    document.getElementById("business").style.display = "block";
+    document.getElementById("hindu").style.display = "none";
+    document.getElementById("ndtv").style.display = "none";
+  };
+  const clickHindu = () => {
+    document.getElementById("forbes").style.display = "none";
+    document.getElementById("bw").style.display = "none";
+    document.getElementById("business").style.display = "none";
+    document.getElementById("hindu").style.display = "block";
+    document.getElementById("ndtv").style.display = "none";
+  };
+  const clickNdtv = () => {
+    document.getElementById("forbes").style.display = "none";
+    document.getElementById("bw").style.display = "none";
+    document.getElementById("business").style.display = "none";
+    document.getElementById("hindu").style.display = "none";
+    document.getElementById("ndtv").style.display = "block";
+  };
+
+  // features end
   return (
     <>
       <Header />
       {/* hero section start */}
-      <div className="container-fluid fbanner">
+      <div
+        className="container-fluid fbanner bg-dark text-light"
+        data-aos="fade-right"
+      >
         <div className="container home-content">
           <div className="row row-cols-9 mt-3 text-center">
             <div className="col items">
@@ -436,12 +476,16 @@ const Home = () => {
       </div>
       {/* hero secttion end */}
       {/* about section start */}
-      <div className="container-fluid about-content">
+      <div
+        className="container-fluid about-content bg-dark text-white"
+        data-aos="fade-right"
+      >
         <div className="container">
           <div className="row about-section">
-            <div className="col-lg-6 p-5" id="pmsl">
+            {/* <div className="col-lg-6 p-5" id="pmsl"> */}
+            <div className=" p-5" id="pmsl">
               <h3 className="text-danger">Pack Move & Store LTD.</h3>
-              <h6>An ISO 9001:2015 & ISO 39001:2012 Certified Company</h6>
+              {/* <h6>An ISO 9001:2015 & ISO 39001:2012 Certified Company</h6> */}
               <h3 className="text-danger">
                 India’s Largest and Most Awarded Movers
               </h3>
@@ -458,12 +502,18 @@ const Home = () => {
                   your goods during your move from your origin address to
                   destination address.
                 </p>
-                <a href="" className="text-danger">
+                <p>
+                  Introduced a one stop solution for hassle free service “Pack,
+                  Move & Store” in your metro city New Delhi, Bangalore, Mumbai,
+                  Kolkata, Keeping in mind the urge of quick and responsiveness
+                  expected from a moving company
+                </p>
+                <a href="" className="">
                   Read More
                 </a>
               </div>
 
-              <div className="pt-3">
+              {/* <div className="pt-3">
                 <h3>Read More A MOVING SOLUTION THAT ASSURES</h3>
                 <div className="row pt-3">
                   <div className="col-lg-6">
@@ -518,9 +568,9 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
-            <div className="col-lg-3 p-5 shadow  bg-body rounded">
+            {/* <div className="col-lg-3 p-5 shadow  bg-body rounded">
               <div className="why-pms ">
                 <h3>Why PMS?</h3>
                 <hr />
@@ -656,13 +706,17 @@ const Home = () => {
                 </a>
                 <ArrowCircleRightIcon />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
+        <hr />
       </div>
       {/* about section end */}
       {/*what serve section start */}
-      <div className="container-fluid serve-section">
+      <div
+        className="container-fluid serve-section bg-dark text-white"
+        data-aos="fade-right"
+      >
         <div className="row text-center">
           <div>
             <h2>What We're Serve to</h2>
@@ -676,7 +730,8 @@ const Home = () => {
                 <a>Domestic</a>
               </li>
               <li
-                className=" hor_1 resp-tab-active resp-tab-item commercial"
+                className=" hor_1 resp-tab-item  commercial"
+                id="Commercial"
                 onClick={clickCommercial}
               >
                 <a>Commercial</a>
@@ -687,7 +742,10 @@ const Home = () => {
       </div>
 
       {/* domestic serve section start */}
-      <div className="container-fluid  commercial-section" id="domestic">
+      <div
+        className="container-fluid domestic-section commercial-section bg-dark text-light"
+        id="domestic"
+      >
         <div className="text-center ">
           <h2>Domestic Moving</h2>
           <p className="csp">
@@ -698,7 +756,8 @@ const Home = () => {
             techniques.
           </p>
         </div>
-        <div className="row text-center">
+        <hr />
+        {/* <div className="row text-center">
           <div className="col-lg-6 ">
             <div className="row commercial-two">
               <div className="col-lg-4">
@@ -754,9 +813,9 @@ const Home = () => {
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="tab-red"></div>
-            {/* supply chain section start */}
-            <div id="supply">
+            <div className="tab-red"></div> */}
+        {/* supply chain section start */}
+        {/* <div id="supply" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -791,10 +850,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* supply chain section end */}
-            {/* warehousing section start */}
-            <div id="warehousing">
+            </div> */}
+        {/* supply chain section end */}
+        {/* warehousing section start */}
+        {/* <div id="warehousing" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -829,10 +888,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* warehousing section end */}
-            {/* exim cargo section start */}
-            <div id="exim">
+            </div> */}
+        {/* warehousing section end */}
+        {/* exim cargo section start */}
+        {/* <div id="exim" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -866,10 +925,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* exim cargo section end */}
-            {/* odc transportion section start */}
-            <div id="odc">
+            </div> */}
+        {/* exim cargo section end */}
+        {/* odc transportion section start */}
+        {/* <div id="odc" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -904,10 +963,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* odc transportation section end */}
-            {/* transportation and logistics section start */}
-            <div id="logistics">
+            </div> */}
+        {/* odc transportation section end */}
+        {/* transportation and logistics section start */}
+        {/* <div id="logistics" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -942,10 +1001,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* transporation and logistics section end */}
-            {/* infrastructure section start */}
-            <div id="infrastructure">
+            </div> */}
+        {/* transporation and logistics section end */}
+        {/* infrastructure section start */}
+        {/* <div id="infrastructure" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -979,15 +1038,19 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* infrastructure section end */}
-          </div>
-        </div>
+            </div> */}
+        {/* infrastructure section end */}
+        {/* </div>
+        </div> */}
       </div>
       {/* domestic serve section end */}
 
       {/* commercial serve section start */}
-      <div className="container-fluid  commercial-section" id="commercial">
+      <div
+        className="container-fluid bg-dark text-light commercial-section"
+        id="commercial"
+        data-aos="fade-left"
+      >
         <div className="text-center ">
           <h2>Commercial Move</h2>
           <p className="csp">
@@ -1000,7 +1063,8 @@ const Home = () => {
             as their commercial moving partner.
           </p>
         </div>
-        <div className="row text-center">
+        <hr />
+        {/* <div className="row text-center">
           <div className="col-lg-6 ">
             <div className="row commercial-two">
               <div className="col-lg-4">
@@ -1056,9 +1120,9 @@ const Home = () => {
             </div>
           </div>
           <div className="col-lg-6">
-            <div className="tab-red"></div>
-            {/* supply chain section start */}
-            <div id="supply">
+            <div className="tab-red"></div> */}
+        {/* supply chain section start */}
+        {/* <div id="supply" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -1093,10 +1157,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* supply chain section end */}
-            {/* warehousing section start */}
-            <div id="warehousing">
+            </div> */}
+        {/* supply chain section end */}
+        {/* warehousing section start */}
+        {/* <div id="warehousing" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -1131,10 +1195,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* warehousing section end */}
-            {/* exim cargo section start */}
-            <div id="exim">
+            </div> */}
+        {/* warehousing section end */}
+        {/* exim cargo section start */}
+        {/* <div id="exim" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -1168,10 +1232,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* exim cargo section end */}
-            {/* odc transportion section start */}
-            <div id="odc">
+            </div> */}
+        {/* exim cargo section end */}
+        {/* odc transportion section start */}
+        {/* <div id="odc" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -1206,10 +1270,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* odc transportation section end */}
-            {/* transportation and logistics section start */}
-            <div id="logistics">
+            </div> */}
+        {/* odc transportation section end */}
+        {/* transportation and logistics section start */}
+        {/* <div id="logistics" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -1244,10 +1308,10 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* transporation and logistics section end */}
-            {/* infrastructure section start */}
-            <div id="infrastructure">
+            </div> */}
+        {/* transporation and logistics section end */}
+        {/* infrastructure section start */}
+        {/* <div id="infrastructure" data-aos="fade-left">
               <div className="tab-image">
                 <img
                   src="/assets/images/agarwal_packers_and_movers_mumbai.jpg"
@@ -1281,22 +1345,21 @@ const Home = () => {
                   Secondary
                 </button>
               </div>
-            </div>
-            {/* infrastructure section end */}
-          </div>
-        </div>
+            </div> */}
+        {/* infrastructure section end */}
+        {/* </div>
+        </div> */}
       </div>
       {/* commercial serve section end */}
       {/*what serve section end */}
       {/* what makes unique pms section start */}
       <div
-        className="container-fluid what-unique-section clearfix
+        className="container-fluid what-unique-section bg-dark text-light clearfix
       aos-init aos-animate"
         data-aos="fade-up"
-        data-aos-duration="1000"
       >
         <div className="container">
-          <h2>What Makes Agarwal Packers Unique?</h2>
+          <h2>What Makes PMS Packers Unique?</h2>
           <h5>We Always Deliver More Than Expected</h5>
           <div>
             <ul
@@ -1307,7 +1370,7 @@ const Home = () => {
                 className="resp-tab-item hor_1 resp-tab-active"
                 aria-controls="hor_1_tab_item-0"
                 role="tab"
-                onClick={clickUsp}
+                // onClick={clickUsp}
               >
                 Our USP
               </li>
@@ -1315,7 +1378,7 @@ const Home = () => {
                 className="resp-tab-item hor_1"
                 aria-controls="hor_1_tab_item-1"
                 role="tab"
-                onClick={clickStudy}
+                // onClick={clickStudy}
               >
                 Case Study
               </li>
@@ -1323,7 +1386,7 @@ const Home = () => {
                 className="resp-tab-item hor_1"
                 aria-controls="hor_1_tab_item-2"
                 role="tab"
-                onClick={clickAdvatage}
+                // onClick={clickAdvatage}
               >
                 Advantages
               </li>
@@ -1331,7 +1394,7 @@ const Home = () => {
                 className="resp-tab-item hor_1"
                 aria-controls="hor_1_tab_item-3"
                 role="tab"
-                onClick={clickSafety}
+                // onClick={clickSafety}
               >
                 Safety Features
               </li>
@@ -1339,7 +1402,7 @@ const Home = () => {
                 className="resp-tab-item hor_1"
                 aria-controls="hor_1_tab_item-4"
                 role="tab"
-                onClick={clickStorage}
+                // onClick={clickStorage}
               >
                 Storage Capacity
               </li>
@@ -1349,7 +1412,11 @@ const Home = () => {
       </div>
       {/* our usp section start */}
 
-      <div className="container usp-section " id="usp">
+      <div
+        className="container-fluid bg-dark text-light usp-section "
+        id="usp"
+        data-aos="fade-down"
+      >
         {/* trucking tube start */}
         <div className="trucking-tube-section" id="truckingTube">
           <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
@@ -1592,7 +1659,7 @@ const Home = () => {
       {/* our usp section end */}
 
       {/* case study start */}
-      <div className="container usp-section " id="study">
+      {/* <div className="container usp-section " id="study">
         <div className="trucking-tube-section" id="truckingTube">
           <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
             <img
@@ -1647,10 +1714,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* case study section end */}
       {/* Advantages section start */}
-      <div className="container usp-section " id="advantage">
+      {/* <div className="container usp-section " id="advantage">
         <div className="trucking-tube-section" id="truckingTube">
           <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
             <img
@@ -1703,10 +1770,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Advantages section end */}
       {/* Safety features  section start */}
-      <div className="container usp-section " id="safety">
+      {/* <div className="container usp-section " id="safety">
         <div className="trucking-tube-section" id="truckingTube">
           <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
             <img
@@ -1778,10 +1845,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Safety features section end */}
       {/* Storage capacity section start */}
-      <div className="container usp-section " id="storage">
+      {/* <div className="container usp-section " id="storage">
         <div className="trucking-tube-section" id="truckingTube">
           <h2 className="trucking-h2 gap-3" role="tab" aria-controls="">
             <img
@@ -1832,15 +1899,15 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* Storage capacity section end */}
       {/* what makes unique pms section end */}
 
       {/* about our company section start */}
-      <div className="container-fluid about-company-section clearfix">
+      {/* <div className="container-fluid about-company-section clearfix">
         <div className="container">
           <div className="row">
-            <div className="col-lg-6 p-5">
+            <div className="col-lg-6 p-5" data-aos="fade-left">
               <div className="row p-3">
                 <div className="col-lg-6">
                   <div className="moving-employee">
@@ -1901,30 +1968,229 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-6 about-company-section-right p-5">
-              <div>
-                <img
-                  src="/assets/images/agarwal-packers-nitin-gadkari-goi.webp"
-                  alt=""
-                />
+            </div> */}
+      {/* // company award event section start */}
+      {/* <div
+              className="col-lg-6 about-company-section-right p-5"
+              data-aos="fade-right"
+            >
+              <div
+                id="carouselExampleControls"
+                className="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-touch="false"
+                data-bs-interval="false"
+              >
+                <div className="carousel-inner">
+                  <div className="carousel-item active">
+                    <div>
+                      <img
+                        src="/assets/images/agarwal-packers-nitin-gadkari-goi.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div className="awards-slider">
+                      <div>
+                        <h5>Awards & Events</h5>
+                        <p>
+                          New Delhi, Shri Nitin Gadkari (Hon’ble, Minister of
+                          Road Transport and Highways of India) in discussion
+                          with Mr. Ramesh Agarwal (Mentor, APML) on major issues
+                          for the betterment of truck drivers of India.
+                        </p>
+                        <div className="d-flex justify-content-between">
+                          <a href="">READ MORE</a>
+                          <div>
+                            <ArrowCircleLeftIcon
+                             
+                              type="button"
+                              data-bs-target="#carouselExampleControls"
+                              data-bs-slide="prev"
+                            />
+                            <ArrowCircleRightIcon
+                            
+                              type="button"
+                              data-bs-target="#carouselExampleControls"
+                              data-bs-slide="next"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <div>
+                      <img
+                        src="/assets/images/agarwal-packers-nitin-gadkari-goi.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div className="awards-slider">
+                      <div>
+                        <h5>Awards & Events</h5>
+                        <p>
+                          New Delhi, Shri Nitin Gadkari (Hon’ble, Minister of
+                          Road Transport and Highways of India) in discussion
+                          with Mr. Ramesh Agarwal (Mentor, APML) on major issues
+                          for the betterment of truck drivers of India.
+                        </p>
+                        <div className="d-flex justify-content-between">
+                          <a href="">READ MORE</a>
+                          <div>
+                            <ArrowCircleLeftIcon
+                             
+                              type="button"
+                              data-bs-target="#carouselExampleControls"
+                              data-bs-slide="prev"
+                            />
+                            <ArrowCircleRightIcon
+                             
+                              type="button"
+                              data-bs-target="#carouselExampleControls"
+                              data-bs-slide="next"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="carousel-item">
+                    <div>
+                      <img
+                        src="/assets/images/agarwal-packers-nitin-gadkari-goi.webp"
+                        alt=""
+                      />
+                    </div>
+                    <div className="awards-slider">
+                      <div>
+                        <h5>Awards & Events</h5>
+                        <p>
+                          New Delhi, Shri Nitin Gadkari (Hon’ble, Minister of
+                          Road Transport and Highways of India) in discussion
+                          with Mr. Ramesh Agarwal (Mentor, APML) on major issues
+                          for the betterment of truck drivers of India.
+                        </p>
+                        <div className="d-flex justify-content-between">
+                          <a href="">READ MORE</a>
+                          <div>
+                            <ArrowCircleLeftIcon
+                             
+                              type="button"
+                              data-bs-target="#carouselExampleControls"
+                              data-bs-slide="prev"
+                            />
+                            <ArrowCircleRightIcon
+                             
+                              type="button"
+                              data-bs-target="#carouselExampleControls"
+                              data-bs-slide="next"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </div> */}
+
+      {/* // company award event section end*/}
+      {/* </div>
+        </div> */}
+      {/* </div> */}
       {/* about our company section end */}
 
       {/* our testimonial section start  */}
-      <div className="container p-5">
+      <div
+        className="container-fluid bg-dark text-light p-5"
+        data-aos="fade-up"
+      >
         <div className="text-center">
           <h4>Our Testimonials</h4>
+          <div className="testimonial-line"></div>
         </div>
-
-        <div className="row">
-          <div className="col-lg-8 testimonial-first">
+        <div className="container">
+          <div className="row testimonial-row">
+            <div className="col-lg-4">
+              <div className="row">
+                <div className="text-center testimonial-box ">
+                  <div>
+                    <img
+                      src="assets/images/E_Sreedharan.jpg"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h5>Mr. E. Sreedharan</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 testimonial-first">
+              <div className="row">
+                <div className="text-center testimonial-box">
+                  <div>
+                    <img
+                      src="assets/images/E_Sreedharan.jpg"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h5>Mr. E. Sreedharan</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 testimonial-first">
+              <div className="row">
+                <div className="text-center testimonial-box">
+                  <div>
+                    <img
+                      src="assets/images/E_Sreedharan.jpg"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h5>Mr. E. Sreedharan</h5>
+                    <p>
+                      Principal Advisor <br /> Delhi Metro Rail Corporation Ltd
+                      <br />
+                      <b>Relocated From New Delhi to Kerala</b>
+                    </p>
+                  </div>
+                  <p>
+                    Your team very carefully and meticulously packed all items
+                    and got them transported safely to two destinations. This is
+                    to acknowledge the superb service rendered by your company.
+                  </p>
+                </div>
+              </div>
+            </div>
             {/* corporate section start */}
-            <div className="corporate-section" id="corporate">
+            {/* <div className="corporate-section" id="corporate">
               <div className="">
                 <img src="/assets/images/hash_img.png" alt="" />
               </div>
@@ -1952,10 +2218,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* corporate section end */}
             {/* banking & financesection start */}
-            <div className="corporate-section" id="banking">
+            {/* <div className="corporate-section" id="banking">
               <div className="">
                 <img src="/assets/images/hash_img.png" alt="" />
               </div>
@@ -1984,10 +2250,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* banking & finance section end */}
             {/* Defence Officers section start */}
-            <div className="corporate-section" id="defence">
+            {/* <div className="corporate-section" id="defence">
               <div className="">
                 <img src="/assets/images/hash_img.png" alt="" />
               </div>
@@ -2015,10 +2281,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* Defence Officers section end */}
             {/* IITs/Education section start */}
-            <div className="corporate-section" id="iits">
+            {/* <div className="corporate-section" id="iits">
               <div className="">
                 <img src="/assets/images/hash_img.png" alt="" />
               </div>
@@ -2046,10 +2312,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* IITs/Education section end */}
             {/* Judicial Services section start */}
-            <div className="corporate-section" id="judicial">
+            {/* <div className="corporate-section" id="judicial">
               <div className="">
                 <img src="/assets/images/hash_img.png" alt="" />
               </div>
@@ -2077,10 +2343,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* Judicial Services section end */}
             {/* Govt. of India / Ministries section start */}
-            <div className="corporate-section" id="govt">
+            {/* <div className="corporate-section" id="govt">
               <div className="">
                 <img src="/assets/images/hash_img.png" alt="" />
               </div>
@@ -2108,10 +2374,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* Govt. of India / Ministries section end */}
             {/* IAS / IPS / IRS section start */}
-            <div className="corporate-section" id="ias">
+            {/* <div className="corporate-section" id="ias">
               <div className="">
                 <img src="/assets/images/hash_img.png" alt="" />
               </div>
@@ -2139,10 +2405,10 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* IAS / IPS / IRS section end */}
             {/* Media & Prominent People section start */}
-            <div className="corporate-section" id="media">
+            {/* <div className="corporate-section" id="media">
               <div className="">
                 <img src="/assets/images/hash_img.png" alt="" />
               </div>
@@ -2170,9 +2436,9 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
             {/* Media & Prominent People section end */}
-          </div>
+            {/* </div>
           <div className="col-lg-4">
             <div>
               <div className="testimonial-nav">
@@ -2215,7 +2481,15 @@ const Home = () => {
                     </li>
                   </ul>
                 </div>
-              </div>
+              </div> */}
+            {/* </div> */}
+            {/* </div> */}
+          </div>
+          <div>
+            <div className="testimonial-btn">
+              <button type="button" class="btn btn-primary">
+                More Testimonials
+              </button>
             </div>
           </div>
         </div>
@@ -2225,10 +2499,16 @@ const Home = () => {
       {/* our testimonial section end */}
 
       {/* our features section start */}
-      <div className="container features">
+      <div
+        className="container-fluid bg-dark text-white features p-4"
+        data-aos="fade-up"
+      >
+        <div className="text-center">
+          <h2>Featured On</h2>
+        </div>
         <div className="row row-cols-5 features-img">
           <div className="col ">
-            <div>
+            <div onClick={clickForbes}>
               <img
                 src="assets/images/forbes-india-logo.jpg"
                 loading="lazy"
@@ -2237,7 +2517,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col">
-            <div>
+            <div onClick={clickBw}>
               <img
                 src="assets/images/bw-business-logo.jpg"
                 loading="lazy"
@@ -2246,7 +2526,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col">
-            <div>
+            <div onClick={clickBusiness}>
               <img
                 src="assets/images/business-standard-logo.jpg"
                 loading="lazy"
@@ -2255,7 +2535,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col">
-            <div>
+            <div onClick={clickHindu}>
               <img
                 src="assets/images/the-hundu-logo.jpg"
                 loading="lazy"
@@ -2264,7 +2544,7 @@ const Home = () => {
             </div>
           </div>
           <div className="col">
-            <div>
+            <div onClick={clickNdtv}>
               <img
                 src="assets/images/ndtv-profit-logo.jpg"
                 loading="lazy"
@@ -2273,8 +2553,125 @@ const Home = () => {
             </div>
           </div>
         </div>
+
+        {/* forbes section start */}
+
+        <div className="text-center" id="forbes">
+          <div>
+            <h4>
+              Agarwal Packers and Movers launches mobile apps for its customers,
+              potential partners
+            </h4>
+          </div>
+          <p>
+            Agarwal Packers and Movers Limited launched two mobile applications
+            last week- APML Suvidha and APML Sathi to equip its customers and
+            onboard new partners, respectively.The two mobile apps were launched
+            in New Delhi by Minister of Road Transport & Highways Nitin Gadkari,
+            in the presence of other dignitaries, including Y.S. Malik
+            (Secretary of Ministry of Road Transport & Highways) and Additional
+            Secretary, NITI Aayog, Jagdish Mittal, Major General Deepak Sapra
+            (SM), Lt.General V.K. Chaturvedi (AVSM), Commodore Gangesh Kumar and
+            Pradeep Singhal.
+          </p>
+        </div>
+        {/* forbes section end */}
+        {/* bw businessworld section start */}
+
+        <div className="text-center" id="bw">
+          <div>
+            <h4>
+              APML providing Social & Economic Empowerment to Ex- Defence
+              personnel through Entrepreneurial scheme.
+            </h4>
+          </div>
+          <p>
+            Ramesh Agarwal, Founder Agarwal Packers and Movers Ltd. in an
+            exclusive conversation with BW Businessworld discusses how APML
+            Saathi Scheme that was launched in Feb 2018 is providing social and
+            economic empowerment to ex-defence servicemen through
+            entrepreneuerial scheme. The initiative is taken along with Ybrant
+            People and AWPO by giving 10 trucks to Ex-Serviceman.
+          </p>
+        </div>
+        {/* bw businessworld section end */}
+        {/*  business standard section start */}
+
+        <div className="text-center" id="business">
+          <div>
+            <h4>
+              Agarwal Packers & Movers Sets Up First International Office In
+              Singapore.
+            </h4>
+          </div>
+          <p>
+            India's leading logistics player Agarwal Packers and Movers Ltd.
+            (APML) has opened its first international office in Singapore to
+            facilitate relocation of homes both within the country and across
+            the globe. The Singapore operations would be spearheaded by Abhishek
+            Raj singh who has been with the group for the last seven years
+            presiding the Indternational Division, the company said in the
+            statement.
+          </p>
+        </div>
+        {/* business standard section end */}
+        {/* hindu section start */}
+
+        <div className="text-center" id="hindu">
+          <div>
+            <h4>
+              Agarwal Packers Seeks Strategic Partner; Plans Rs. 500-Cr IPO
+            </h4>
+          </div>
+          <p>
+            Agarwal Packers and Movers Ltd, India's biggest relocation company
+            by volume (83,000 relocation assignments in FY16) is seeking a
+            strategic partner to sacle up its business, a company official said.
+            The company, which is also a leading player in the transportation of
+            high-value goods like pharmaceuticals, electronics, food products,
+            is planning a Rs. 500 crore initial public offering to fund
+            expansion plans, the official added.
+          </p>
+        </div>
+        {/* hindu section end */}
+        {/* ndtv section start */}
+
+        <div className="text-center" id="ndtv">
+          <div>
+            <h4>Agarwal Packers scouts for strategic investor</h4>
+          </div>
+          <p>
+            Logistics firm Agarwal Packers and Movers has said it well "very
+            soon" bring on board a strategic investor after meeting certain
+            revenue targets and may go for an IPO in the next three years.The
+            Delhi-based company have also drawn up a Rs 650-crore investment
+            plan for the next three years. "We are waiting for the topline to
+            get better", the family-owned firm's Chairman Ramesh Agarwal told
+            PTI when asked about capital raised plans.
+          </p>
+        </div>
+        {/* ndtv section end */}
+        <hr />
       </div>
       {/* our features section end */}
+
+      {/* book flight section start */}
+      {/* <div className="container book-flight p-5">
+        <div className="text-center">
+          <h2>
+            Now Book Your Flights at Discounted Rates with APML Trips and Travel
+          </h2>
+        </div>
+        <div className="text-center">
+          <img
+            src="assets/images/apml-flight-booking.png"
+            loading="lazy"
+            alt=""
+          />
+        </div>
+      </div> */}
+
+      {/* book flight section end */}
       <Footer />
     </>
   );

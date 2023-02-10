@@ -7,12 +7,12 @@ import MenuIcon from "@mui/icons-material/Menu";
 // import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import "./css/header.css";
 const Header = () => {
-  const useStyles = makeStyles((theme) => ({
+  const useStyles = makeStyles(theme => ({
     avatar: {
       backgroundColor: theme.palette.grey[50],
       border: `1px solid ${theme.palette.info.main}`,
-      color: theme.palette.info.main,
-    },
+      color: theme.palette.info.main
+    }
   }));
   const classes = useStyles();
 
@@ -96,8 +96,8 @@ const Header = () => {
       {/* haeder top end */}
       {/* header bottom start */}
 
-      <div className="container-fluid header-bottom nav-fixed p-3">
-        <div className="container header-inner">
+      <div className="container-fluid header-bottom ">
+        {/* <div className="container header-inner">
           <div className="row">
             <div className="col-md-2"></div>
             <div className="col-md-7">
@@ -154,7 +154,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* main menu */}
         <div className="row">
           <div className="main-header-menu">
@@ -164,7 +164,7 @@ const Header = () => {
                 <ul className="header-links mt-3">
                   <li className="dropdown ">
                     <a href="">Profile</a>
-                    <div className="dropdown-content text-danger">hover</div>
+                    {/* <div className="dropdown-content text-danger">hover</div> */}
                   </li>
 
                   <li>
@@ -192,11 +192,11 @@ const Header = () => {
                   </li>
                 </ul>
               </div>
-              <div className="col-lg-1 menuicon">
+              {/* <div className="col-lg-1 menuicon">
                 <a href="">
                   <MenuIcon className="icon text-dark icon-large" />
                 </a>
-              </div>
+              </div> */}
             </nav>
           </div>
         </div>
